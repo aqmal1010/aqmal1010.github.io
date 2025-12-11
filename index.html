@@ -1,239 +1,124 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portofolio Aqmal</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<style>
-    :root {
-        --bg-dark: #000;
-        --bg-light: #f5f5f5;
-        --text-dark: #fff;
-        --text-light: #111;
-        --accent: #00eaff;
-    }
-
-    body {
-        margin: 0;
-        font-family: "Segoe UI", sans-serif;
-        background: var(--bg-dark);
-        color: var(--text-dark);
-        transition: 0.4s;
-    }
-
-    .light {
-        background: var(--bg-light);
-        color: var(--text-light);
-    }
-
-    nav {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 25px;
-        backdrop-filter: blur(10px);
-        z-index: 1000;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    nav .logo {
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: inherit;
-        transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-        color: var(--accent);
-    }
-
-    .toggle-mode {
-        cursor: pointer;
-        font-size: 22px;
-    }
-
-    section {
-        padding: 120px 10%;
-        min-height: 100vh;
-        animation: fadeIn 1.5s ease forwards;
-        opacity: 0;
-    }
-
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-
-    #home {
-        text-align: center;
-    }
-
-    #home img {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        border: 3px solid var(--accent);
-        box-shadow: 0 0 25px var(--accent);
-    }
-
-    .social-icons {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .social-icons a {
-        font-size: 28px;
-        color: var(--accent);
-        transition: 0.3s;
-    }
-
-    .social-icons a:hover {
-        transform: scale(1.2);
-    }
-
-    /* Work Experience Cards */
-    .work-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .work-card {
-        background: rgba(255,255,255,0.07);
-        padding: 20px;
-        border-radius: 12px;
-        transition: 0.3s;
-    }
-
-    .work-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 0 18px var(--accent);
-    }
-
-    /* Projects */
-    .project-slider {
-        display: flex;
-        overflow-x: auto;
-        gap: 20px;
-        scroll-snap-type: x mandatory;
-    }
-
-    .project {
-        min-width: 250px;
-        scroll-snap-align: center;
-        background: rgba(255,255,255,0.08);
-        padding: 20px;
-        border-radius: 15px;
-    }
-
-    .contact a {
-        color: var(--accent);
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    @media (max-width: 600px) {
-        nav ul { display: none; }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Aqmal Salya Nur Alamsyah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<nav>
-    <div class="logo">AqmalDev</div>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#work">Pengalaman</a></li>
-        <li><a href="#projects">Projek</a></li>
-        <li><a href="#contact">Kontak</a></li>
-    </ul>
-    <i class="fas fa-moon toggle-mode" id="modeToggle"></i>
-</nav>
+    <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+        <i class="fas fa-sun"></i> </button>
 
-<section id="home">
-    <img src="assets/images/fotoprofile.jpg" alt="Profile">
-    <h1>Halo, Saya Aqmal Salya Nur Alamsyah</h1>
-    <p>Web Developer • Mobile Developer • Machine Learning Engineer</p>
+    <nav>
+        <div class="logo">A.S.N.A</div>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
 
-    <div class="social-icons">
-        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/aqmal1010"><i class="fab fa-github"></i></a>
-    </div>
-</section>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <p class="greeting">Halo, Saya</p>
+                <h1>Aqmal Salya Nur Alamsyah</h1>
+                <p class="role">Web Developer • Mobile Developer • **Computer Vision Enthusiast**</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/aqmal-salya-nur-alamsyah-b959a6352" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/aqmal1010" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:aqmalimam@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="assets/images/fotoprofile.jpg" alt="Foto Profile Aqmal" class="profile-photo">
+            </div>
+        </section>
 
-<section id="about">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah pengembang dengan fokus Machine Learning dan Computer Vision.</p>
-</section>
+        <section id="about" class="fade-in-section">
+            <h2>Tentang Saya 🚀</h2>
+            <div class="about-grid">
+                <div class="text-box">
+                    <p>Saya adalah lulusan Teknik Informatika yang berfokus pada **Machine Learning**, khususnya **Computer Vision** (deteksi objek, klasifikasi gambar), dan implementasi AI ke dalam aplikasi **Android**. Saya antusias dengan teknologi baru dan proyek berdampak nyata.</p>
+                </div>
+                <div class="text-box">
+                    <h3>Pengalaman Kunci</h3>
+                    <ul class="timeline-modern">
+                        <li>
+                            <h4>Staff ERP (2025)</h4>
+                            <p>Mengembangkan aplikasi support system ERP Perusahaan, QA Testing, serta monitoring sistem.</p>
+                        </li>
+                        <li>
+                            <h4>Android Developer Freelance (2022 – 2023)</h4>
+                            <p>Membangun aplikasi Android modern (Kotlin) dengan integrasi ML dan fitur canggih.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<section id="work">
-    <h2>Pengalaman Kerja</h2>
+        <section id="skills" class="fade-in-section">
+            <h2>Keahlian Teknis 💡</h2>
+            <div class="skills-grid">
+                <div class="skill-card">TensorFlow / Keras</div>
+                <div class="skill-card">Computer Vision</div>
+                <div class="skill-card">Android (Kotlin)</div>
+                <div class="skill-card">UI / UX Design</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Data Analysis</div>
+                <div class="skill-card">Model Deployment</div>
+            </div>
+        </section>
 
-    <div class="work-list">
-        <div class="work-card">
-            <h3>Staff ERP</h3>
-            <p>2025 – 2025</p>
-            <p>Develop support system, QA Tester, maintenance ERP.</p>
-        </div>
+        <section id="projects" class="fade-in-section">
+            <h2>Proyek Pilihan 💻</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="project-card">
+                        <img src="https://i.ibb.co/3rzf3gw/gal1.jpg" alt="Proyek 1">
+                        <h3>Object Detection App</h3>
+                        <p>Implementasi MobileNetV2 untuk deteksi objek real-time di Android.</p>
+                        <a href="#">Lihat Detail</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://i.ibb.co/d0Fc87X/gal2.jpg" alt="Proyek 2">
+                        <h3>ERP Support Dashboard</h3>
+                        <p>Dashboard untuk memonitor sistem ERP menggunakan stack MERN/Python.</p>
+                        <a href="#">Lihat Detail</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://i.ibb.co/mFJv43f/gal3.jpg" alt="Proyek 3">
+                        <h3>Custom UI/UX Kit</h3>
+                        <p>Desain sistem UI/UX minimalis untuk aplikasi mobile.</p>
+                        <a href="#">Lihat Detail</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://i.ibb.co/5LTFKXh/gal4.jpg" alt="Proyek 4">
+                        <h3>Data Visualization Tool</h3>
+                        <p>Otomasi laporan data menggunakan Python (Pandas & Matplotlib).</p>
+                        <a href="#">Lihat Detail</a>
+                    </div>
+                </div>
+                <button class="carousel-nav prev" aria-label="Previous Project">&#10094;</button>
+                <button class="carousel-nav next" aria-label="Next Project">&#10095;</button>
+            </div>
+        </section>
 
-        <div class="work-card">
-            <h3>Android Developer Freelance</h3>
-            <p>2022 – 2023</p>
-            <p>Membangun aplikasi Android modern.</p>
-        </div>
+        <section id="contact" class="fade-in-section">
+            <h2>Mari Terhubung! 📧</h2>
+            <p class="contact-text">Saya terbuka untuk kolaborasi dan peluang baru. Jangan ragu untuk menghubungi saya!</p>
+            <a href="mailto:aqmalimam@gmail.com" class="cta-button">Kirim Email</a>
+        </section>
+    </main>
 
-        <div class="work-card">
-            <h3>Data Analyst Assistant</h3>
-            <p>2021 – 2022</p>
-            <p>Analisa data dan visualisasi Python.</p>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projek Saya</h2>
-
-    <div class="project-slider">
-        <div class="project">Aplikasi Deteksi Penyakit Cabai</div>
-        <div class="project">Sistem Absensi GPS</div>
-        <div class="project">Website MA Al-Muttaqien</div>
-        <div class="project">Deteksi Hama Tanaman</div>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2>Kontak</h2>
-    <p>Email: <a href="mailto:aqmalimam@gmail.com">aqmalimam@gmail.com</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/aqmal</a></p>
-    <p>GitHub: <a href="https://github.com/aqmal1010">github.com/aqmal1010</a></p>
-</section>
-
-<script>
-    const toggle = document.getElementById("modeToggle");
-    toggle.addEventListener("click", () => {
-        document.body.classList.toggle("light");
-        toggle.classList.toggle("fa-sun");
-    });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
