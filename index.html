@@ -1,124 +1,260 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Aqmal Salya Nur Alamsyah</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Aqmal | Full Stack Developer</title>
 </head>
 <body>
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <span class="loader-text">Aqmal Portfolio</span>
+            <div class="loader-bar">
+                <div class="loader-progress" id="loader-progress"></div>
+            </div>
+            <span class="loader-percentage" id="loader-percentage">0%</span>
+        </div>
+    </div>
 
-    <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-        <i class="fas fa-sun"></i> </button>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Aqmal<span class="dot">.</span></a>
+            </div>
 
-    <nav>
-        <div class="logo">A.S.N.A</div>
-        <ul>
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#skills">Keahlian</a></li>
-            <li><a href="#projects">Proyek</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <p class="greeting">Halo, Saya</p>
-                <h1>Aqmal Salya Nur Alamsyah</h1>
-                <p class="role">Web Developer • Mobile Developer • **Computer Vision Enthusiast**</p>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home bd-grid" id="home">
+            <div class="home__bg-glow"></div> <div class="home__data">
+                <div class="home__greeting-box">
+                    <span class="greeting-text">Welcome to my world</span>
+                </div>
+                <h1 class="home__title">Hi, I'm <span class="text-gradient">Aqmal</span> <br> Full Stack Developer</h1>
+                <p class="home__description">
+                    Membangun pengalaman web yang cepat, responsif, dan menarik secara visual dengan teknologi modern.
+                </p>
                 
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/aqmal-salya-nur-alamsyah-b959a6352" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/aqmal1010" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:aqmalimam@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <div class="home__buttons">
+                    <a href="#contact" class="button button--primary">Hire Me</a>
+                    <a href="assets/files/CV - Aqmal Salya Nur Alamsyah.pdf" class="button button--cv" target="_blank" rel="noopener" download>View CV</a>
+                    <a href="#work" class="button button--ghost">View Work <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
-            <div class="hero-image-container">
-                <img src="assets/images/fotoprofile.jpg" alt="Foto Profile Aqmal" class="profile-photo">
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/aqmal-salya-nur-alamsyah-b959a6352" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/aqmal1010" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                <a href="#" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+            </div>
+
+            <div class="home__img">
+                <img src="assets/img/perfil.png" alt="Profile" class="home__blob-img">
             </div>
         </section>
 
-        <section id="about" class="fade-in-section">
-            <h2>Tentang Saya 🚀</h2>
-            <div class="about-grid">
-                <div class="text-box">
-                    <p>Saya adalah lulusan Teknik Informatika yang berfokus pada **Machine Learning**, khususnya **Computer Vision** (deteksi objek, klasifikasi gambar), dan implementasi AI ke dalam aplikasi **Android**. Saya antusias dengan teknologi baru dan proyek berdampak nyata.</p>
+        <section class="about section" id="about">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/about.jpg" alt="">
                 </div>
-                <div class="text-box">
-                    <h3>Pengalaman Kunci</h3>
-                    <ul class="timeline-modern">
-                        <li>
-                            <h4>Staff ERP (2025)</h4>
-                            <p>Mengembangkan aplikasi support system ERP Perusahaan, QA Testing, serta monitoring sistem.</p>
-                        </li>
-                        <li>
-                            <h4>Android Developer Freelance (2022 – 2023)</h4>
-                            <p>Membangun aplikasi Android modern (Kotlin) dengan integrasi ML dan fitur canggih.</p>
-                        </li>
-                    </ul>
+                
+                <div class="about__data">
+                    <p class="about__text">
+                        Saya menggabungkan latar belakang <strong>S1 Teknik Informatika</strong> dengan pengalaman nyata. Fokus saya adalah menciptakan kode yang bersih (clean code), optimasi performa, dan antarmuka yang intuitif. Saya bersemangat mengubah masalah kompleks menjadi solusi digital yang elegan.
+                    </p>
+                    <div class="about__info">
+                        <div>
+                            <span class="about__number">02+</span>
+                            <span class="about__meta">Years <br> Experience</span>
+                        </div>
+                        <div>
+                            <span class="about__number">10+</span>
+                            <span class="about__meta">Projects <br> Completed</span>
+                        </div>
+                        <div>
+                            <span class="about__number">05+</span>
+                            <span class="about__meta">Companies <br> Worked</span>
+                        </div>
+                    </div>
+                </div>                                   
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">My Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div class="skills__card">
+                    <i class='bx bxl-html5 skills__icon' style="color: #e34c26;"></i>
+                    <h3 class="skills__name">HTML & CSS</h3>
+                    <span class="skills__level">Expert</span>
+                    <div class="skills__bar">
+                        <div class="skills__percentage" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="skills__card">
+                    <i class='bx bxl-javascript skills__icon' style="color: #f0db4f;"></i>
+                    <h3 class="skills__name">JavaScript</h3>
+                    <span class="skills__level">Intermediate</span>
+                    <div class="skills__bar">
+                        <div class="skills__percentage" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skills__card">
+                    <i class='bx bxl-react skills__icon' style="color: #61dbfb;"></i>
+                    <h3 class="skills__name">React / Next.js</h3>
+                    <span class="skills__level">Advanced</span>
+                    <div class="skills__bar">
+                        <div class="skills__percentage" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="skills__card">
+                    <i class='bx bxl-python skills__icon' style="color: #4b8bbe;"></i>
+                    <h3 class="skills__name">Python</h3>
+                    <span class="skills__level">Intermediate</span>
+                    <div class="skills__bar">
+                        <div class="skills__percentage" style="width: 65%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skills__card">
+                    <i class='bx bxs-data skills__icon' style="color: #fff;"></i>
+                    <h3 class="skills__name">Backend & DB</h3>
+                    <span class="skills__level">Basic</span>
+                    <div class="skills__bar">
+                        <div class="skills__percentage" style="width: 60%;"></div>
+                    </div>
+                </div>
+
+                <div class="skills__card">
+                    <i class='bx bxl-figma skills__icon' style="color: #a259ff;"></i>
+                    <h3 class="skills__name">UI/UX Design</h3>
+                    <span class="skills__level">Intermediate</span>
+                    <div class="skills__bar">
+                        <div class="skills__percentage" style="width: 70%;"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="fade-in-section">
-            <h2>Keahlian Teknis 💡</h2>
-            <div class="skills-grid">
-                <div class="skill-card">TensorFlow / Keras</div>
-                <div class="skill-card">Computer Vision</div>
-                <div class="skill-card">Android (Kotlin)</div>
-                <div class="skill-card">UI / UX Design</div>
-                <div class="skill-card">Git & GitHub</div>
-                <div class="skill-card">Python</div>
-                <div class="skill-card">Data Analysis</div>
-                <div class="skill-card">Model Deployment</div>
-            </div>
-        </section>
+        <section class="work section" id="work">
+            <h2 class="section-title">Featured Projects</h2>
 
-        <section id="projects" class="fade-in-section">
-            <h2>Proyek Pilihan 💻</h2>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="project-card">
-                        <img src="https://i.ibb.co/3rzf3gw/gal1.jpg" alt="Proyek 1">
-                        <h3>Object Detection App</h3>
-                        <p>Implementasi MobileNetV2 untuk deteksi objek real-time di Android.</p>
-                        <a href="#">Lihat Detail</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://i.ibb.co/d0Fc87X/gal2.jpg" alt="Proyek 2">
-                        <h3>ERP Support Dashboard</h3>
-                        <p>Dashboard untuk memonitor sistem ERP menggunakan stack MERN/Python.</p>
-                        <a href="#">Lihat Detail</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://i.ibb.co/mFJv43f/gal3.jpg" alt="Proyek 3">
-                        <h3>Custom UI/UX Kit</h3>
-                        <p>Desain sistem UI/UX minimalis untuk aplikasi mobile.</p>
-                        <a href="#">Lihat Detail</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://i.ibb.co/5LTFKXh/gal4.jpg" alt="Proyek 4">
-                        <h3>Data Visualization Tool</h3>
-                        <p>Otomasi laporan data menggunakan Python (Pandas & Matplotlib).</p>
-                        <a href="#">Lihat Detail</a>
+            <div class="work__container bd-grid">
+                <div class="work__card">
+                    <img src="assets/img/work1.jpg" alt="" class="work__img">
+                    <div class="work__content">
+                        <h3 class="work__title">E-Commerce App</h3>
+                        <a href="#" class="work__button">View Details <i class='bx bx-right-arrow-alt'></i></a>
                     </div>
                 </div>
-                <button class="carousel-nav prev" aria-label="Previous Project">&#10094;</button>
-                <button class="carousel-nav next" aria-label="Next Project">&#10095;</button>
+
+                <div class="work__card">
+                    <img src="assets/img/work2.jpg" alt="" class="work__img">
+                    <div class="work__content">
+                        <h3 class="work__title">Portfolio V1</h3>
+                        <a href="#" class="work__button">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+
+                <div class="work__card">
+                    <img src="assets/img/work3.jpg" alt="" class="work__img">
+                    <div class="work__content">
+                        <h3 class="work__title">Dashboard System</h3>
+                        <a href="#" class="work__button">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+                
+                <div class="work__card">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__content">
+                        <h3 class="work__title">Landing Page</h3>
+                        <a href="#" class="work__button">View Details <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="fade-in-section">
-            <h2>Mari Terhubung! 📧</h2>
-            <p class="contact-text">Saya terbuka untuk kolaborasi dan peluang baru. Jangan ragu untuk menghubungi saya!</p>
-            <a href="mailto:aqmalimam@gmail.com" class="cta-button">Kirim Email</a>
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+
+            <div class="contact__container bd-grid">
+                <div class="contact__info">
+                    <h3 class="contact__subtitle">Let's talk about everything!</h3>
+                    <p class="contact__text">Jangan ragu untuk menghubungi saya untuk kolaborasi proyek atau sekadar menyapa.</p>
+                    
+                    <div class="contact__data">
+                        <div class="contact__item">
+                            <i class='bx bxl-whatsapp contact__icon'></i>
+                            <span>+62 896-7372-0469</span>
+                        </div>
+                        <div class="contact__item">
+                            <i class='bx bx-envelope contact__icon'></i>
+                            <span>aqmalimam@gmail.com</span>
+                        </div>
+                        <div class="contact__item">
+                            <i class='bx bx-map contact__icon'></i>
+                            <span>Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/xovgyrvj" method="POST" class="contact__form">
+                    
+                    <input type="hidden" name="_next" value="https://URL_LENGKAP_PORTFOLIO_ANDA/#contact">
+                    <div class="contact__inputs">
+                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                    </div>
+                    <textarea name="message" cols="0" rows="10" placeholder="Message" class="contact__input" required></textarea>
+                    
+                    <button type="submit" class="button button--primary contact__button">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer__container bd-grid">
+            <div class="footer__left">
+                <h3 class="footer__title">Aqmal<span class="dot">.</span></h3>
+                <p class="footer__copy">&#169; 2025 Aqmal. All rights reserved.</p>
+            </div>
+
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/aqmal-salya-nur-alamsyah-b959a6352" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/aqmalamsyh_/profilecard/?igsh=Z3pxZHM3NDh1ODJ1" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/aqmal1010" class="footer__icon"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
